@@ -1,0 +1,8 @@
+VideoGen {
+	mandatory videoseq v1 "/home/jeremy/Documents/IDM/videos/Video_Of_People_Walking.mp4"
+	optional videoseq v2 "/home/jeremy/Documents/IDM/videos/Bokeh_Video_Of_Leaves.mp4"
+	alternatives v3 {
+		videoseq v31 "/home/jeremy/Documents/IDM/videos/Bear_In_A_Forest.mp4"
+		videoseq v32 "/home/jeremy/Documents/IDM/videos/A_Wet_Hawk.mp4"
+	}
+}

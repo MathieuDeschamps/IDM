@@ -1,0 +1,12 @@
+VideoGen {
+	mandatory image i1 "/home/jeremy/Documents/IDM/images/first.png"
+	mandatory videoseq v1 "/home/jeremy/Documents/IDM/videos/Pexels_Videos_ 1562544.mp4"
+	optional image i2 "/home/jeremy/Documents/IDM/images/second.png"
+	optional videoseq v2 "/home/jeremy/Documents/IDM/videos/Video_Of_Camels.mp4"
+	alternatives v3 {
+		videoseq v31 "/home/jeremy/Documents/IDM/videos/Cute_Cat_Falling_Asleep.mp4"
+		videoseq v32 "/home/jeremy/Documents/IDM/videos/Bear_In_A_Forest.mp4"
+	}
+	optional videoseq v4 "/home/jeremy/Documents/IDM/videos/Bokeh_Video_Of_Leaves.mp4"
+	mandatory videoseq v5 "/home/jeremy/Documents/IDM/videos/Coffee_Machine_Dispensing_Coffee"
+}

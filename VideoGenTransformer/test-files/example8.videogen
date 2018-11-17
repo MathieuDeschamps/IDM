@@ -1,0 +1,6 @@
+VideoGen {
+	alternatives v3 {
+		videoseq v31 "/home/jeremy/Documents/IDM/videos/Cute_Cat_Falling_Asleep.mp4"
+		videoseq v32 "/home/jeremy/Documents/IDM/videos/Bear_In_A_Forest.mp4"
+	}
+}

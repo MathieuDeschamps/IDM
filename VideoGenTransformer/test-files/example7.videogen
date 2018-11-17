@@ -1,0 +1,3 @@
+VideoGen {
+	optional videoseq v1 "/home/jeremy/Documents/IDM/videos/Video_Of_Camels.mp4"
+}

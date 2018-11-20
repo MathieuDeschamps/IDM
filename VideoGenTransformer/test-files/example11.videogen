@@ -1,14 +1,14 @@
 VideoGen {
 	alternatives v1 {
-		image v11 "/home/jeremy/Documents/IDM/images/A_Wet_Hawk.mp4"
-		image v12 "/home/jeremy/Documents/IDM/images/Bear_In_A_Forest.mp4"
+		image v11 "res/images/A_Wet_Hawk.mp4"
+		image v12 "res/images/Bear_In_A_Forest.mp4"
 	}
 	alternatives v2 {
-		image v21 "/home/jeremy/Documents/IDM/images/Cute_Cat_Falling_Asleep.mp4"
-		image v22 "/home/jeremy/Documents/IDM/images/A_Wet_Hawk.mp4.mp4"
+		image v21 "res/images/Cute_Cat_Falling_Asleep.mp4"
+		image v22 "res/images/A_Wet_Hawk.mp4.mp4"
 	}
 	alternatives v3 {
-		image v31 "/home/jeremy/Documents/IDM/images/Pexels_Videos_ 1562544.mp4"
-		image v32 "/home/jeremy/Documents/IDM/images/Pexels_Videos_4335.mp4"
+		image v31 "res/images/Pexels_Videos_ 1562544.mp4"
+		image v32 "res/images/Pexels_Videos_4335.mp4"
 	}
 }

@@ -8,7 +8,7 @@ VideoGen {
 		image v22 "res/images/A_Wet_Hawk.mp4.mp4"
 	}
 	alternatives v3 {
-		image v31 "res/images/Pexels_Videos_ 1562544.mp4"
+		image v31 "res/images/Pexels_Videos_1562544.mp4"
 		image v32 "res/images/Pexels_Videos_4335.mp4"
 	}
 }

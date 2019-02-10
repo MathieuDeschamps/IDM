@@ -1,0 +1,18 @@
+VideoGen {
+	mandatory image i1 "res/images/first.png"
+	mandatory videoseq v1 "res/videos/Pexels_Videos_1562544.mp4"
+	optional image i2 "res/images/second.png"
+	optional videoseq v2 "res/videos/Video_Of_Camels.mp4"
+	alternatives v3 {
+		videoseq v31 "res/videos/Cute_Cat_Falling_Asleep.mp4"
+		{
+			probability 75
+		}
+		videoseq v32 "res/videos/Bear_In_A_Forest.mp4"
+		{
+			probability 25
+		}
+	}
+	optional videoseq v4 "res/videos/Bokeh_Video_Of_Leaves.mp4"
+	mandatory videoseq v5 "res/videos/Coffee_Machine_Dispensing_Coffee.mp4"
+}

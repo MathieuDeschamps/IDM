@@ -1,5 +1,5 @@
 VideoGen {
-	mandatory videoseq v1 "res/videos/Bear_In_A_Forest.mp4"
+	mandatory videoseq v1 "res/videos/Bear_In_A_Forest.mp4" { duration 82 }
 	optional videoseq v2 "res/videos/A_Wet_Hawk.mp4"
 	alternatives v3 {
 		videoseq v31 "res/videos/Bokeh_Video_Of_Leaves.mp4"

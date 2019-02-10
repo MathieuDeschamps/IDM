@@ -2,6 +2,7 @@ import org.junit.Test
 import org.eclipse.emf.common.util.URI
 
 import static org.junit.Assert.*
+import generators.VideoGenHelper
 
 class VideoGenTest1XtendVersion {
 	

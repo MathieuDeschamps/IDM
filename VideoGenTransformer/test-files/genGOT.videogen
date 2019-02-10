@@ -1,0 +1,35 @@
+VideoGen{
+	mandatory videoseq v1 "Opening.mp4"
+	mandatory videoseq v2 "King_s_Landing.mp4"
+	alternatives v3 {
+		videoseq "Dragonstone.mp4"
+		videoseq "Harrenhal.mp4"
+		videoseq "Pyke.mp4"
+		videoseq "Riverrun.mp4"
+		videoseq "The_Eyrie.mp4"
+		videoseq "The_Twins.mp4"
+	}
+	alternatives v4 {
+		videoseq "Winterfell.mp4" {
+			probability 60
+		}
+		videoseq "Winterfell_burning.mp4" {
+			probability 40
+		}
+	}
+	mandatory videoseq v5 "The_Wall.mp4"
+	optional videoseq v6 "Eastwatch.mp4" {
+		probability 25
+	}
+	alternatives v7 {
+		videoseq "Braavos.mp4"
+		videoseq "Dorne.mp4"
+		videoseq "Meereen.mp4"
+		videoseq "Moat_Cailin.mp4"
+		videoseq "Pentos.mp4"
+		videoseq "Qarth.mp4"
+		videoseq "Vaes_Dothrak.mp4"
+		videoseq "Yunkai.mp4"
+	}
+	mandatory videoseq v8 "Ending.mp4"
+}

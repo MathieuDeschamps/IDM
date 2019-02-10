@@ -30,7 +30,7 @@ public class Verif{
 		this.videoGeneratorModel = videoGeneratorModel;
 	}
 	
-	public void run() throws IdAlreadyExists, InvalidProbability, FileNotFoundException {
+	public void process() throws IdAlreadyExists, InvalidProbability, FileNotFoundException {
 		visitVideoGeneratorModel(videoGeneratorModel);
 		
 	}

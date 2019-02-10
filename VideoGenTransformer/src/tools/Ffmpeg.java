@@ -10,10 +10,7 @@ import exceptions.ImageNotGenerated;
 import exceptions.VideoNotGenerated;
 
 public class Ffmpeg {
-	
 
-
-	
 	public static void makeThumbnails(String inputPath, String videoDuration, String outputPath) throws ImageNotGenerated {
 		String command = "ffmpeg -y -i "; 
 		command += inputPath;
@@ -21,10 +18,7 @@ public class Ffmpeg {
 		command += videoDuration;
 		command += " -f image2 ";
 		command += outputPath;
-		String errorMsg = "Output file is empty, nothing was encoded";
 		Process process = null;
-		String message = "";
-		String result = "";
 		try {
 			process = Runtime.getRuntime().exec(command);
 			process.waitFor();
@@ -37,8 +31,7 @@ public class Ffmpeg {
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
+		}		
 	}
 	
 	public static void concatVideos(String inputPath, String outputPath) throws VideoNotGenerated {
@@ -66,7 +59,6 @@ public class Ffmpeg {
 	public static int getDuration(String path){
 		String command = "ffprobe -i "+ path + " -show_format ";
 		Process process;
-		String message = "";
 		try {
 			process = Runtime.getRuntime().exec(command);
 			
@@ -96,14 +88,18 @@ public class Ffmpeg {
 		}
 	}
 	
-	public static void formatVideo(String path) {
+	public static void formatVideo(String inputPath, String outputPath) throws VideoNotGenerated {
 		String command = "ffmpeg -i ";
-		command += path;
+		command += inputPath;
 		command += "-acodec libvo_aacenc -vcodec libx264 -s 1920x1080 -r 60 -strict experimental";
-		// format path name to move extension at the end
-		command += path + "_convert";
+		command += outputPath;
 		try {
-			Runtime.getRuntime().exec(command);
+			Process process = Runtime.getRuntime().exec(command);
+			process.waitFor();
+			File format = new File(outputPath);
+			if(!format.exists()){
+				throw new VideoNotGenerated("Ffmpeg: " + outputPath);
+			}
 		}catch (Exception e) {
 			// TODO: handle exception
 		}

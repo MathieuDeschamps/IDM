@@ -2,18 +2,12 @@ package generators;
 
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
-import java.util.List;
 
 import org.eclipse.emf.common.util.URI;
 import org.junit.Test;
 
-import generators.VideoGenHelper;
-import model.Possibility;
 import fr.istic.videoGen.VideoGeneratorModel;
-import generators.PlaylistGen;
+import model.Possibility;
 import tools.Utils;
 
 public class TestPlaylistGenToFffmeg {

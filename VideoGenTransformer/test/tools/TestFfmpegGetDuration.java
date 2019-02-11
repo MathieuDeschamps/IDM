@@ -54,7 +54,7 @@ public class TestFfmpegGetDuration {
 	@Test
 	public void durationPexelsVideos1562544() throws Exception {
 		String inputPath =  "res/videos/Pexels_Videos_1562544.mp4";
-		int duration = Ffmpeg.getDuration("res/videos/Pexels_Videos_1562544.mp4");
+		int duration = Ffmpeg.getDuration(inputPath);
 		assertEquals(15, duration);
 	}
 	

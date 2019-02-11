@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.eclipse.emf.common.util.URI;
-
 import exceptions.FfmpegException;
 import fr.istic.videoGen.AlternativesMedia;
 import fr.istic.videoGen.ImageDescription;

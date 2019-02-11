@@ -1,16 +1,12 @@
 package generators;
-import static org.junit.Assert.*;
-
-import javax.rmi.CORBA.Util;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.eclipse.emf.common.util.URI;
 import org.junit.Test;
 
-import generators.VideoGenHelper;
-import model.Possibility;
 import fr.istic.videoGen.VideoGeneratorModel;
-import generators.PlaylistGen;
-import tools.Utils;
+import model.Possibility;
 import tools.UtilsTest;
 
 public class TestPlaylistGen {

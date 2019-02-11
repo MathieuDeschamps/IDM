@@ -7,7 +7,6 @@ import static org.junit.Assert.*;
 import org.eclipse.emf.common.util.URI;
 import org.junit.Test;
 
-import exceptions.FfmpegException;
 import generators.VideoGenHelper;
 import fr.istic.videoGen.VideoGeneratorModel;
 import generators.ThumbnailGen;

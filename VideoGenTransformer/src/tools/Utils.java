@@ -2,19 +2,6 @@ package tools;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-
-import javax.xml.soap.Text;
-
-import com.google.common.base.CharMatcher;
-
-import fr.istic.videoGen.AlternativesMedia;
-import fr.istic.videoGen.MandatoryMedia;
-import fr.istic.videoGen.Media;
-import fr.istic.videoGen.OptionalMedia;
-import fr.istic.videoGen.VideoGeneratorModel;
 
 public class Utils{
 		

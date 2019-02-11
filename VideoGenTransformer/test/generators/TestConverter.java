@@ -1,12 +1,11 @@
 package generators;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 import org.eclipse.emf.common.util.URI;
 import org.junit.Test;
 
 import fr.istic.videoGen.VideoGeneratorModel;
-import model.Possibility;
 
 public class TestConverter {
 

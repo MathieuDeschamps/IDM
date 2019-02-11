@@ -1,8 +1,5 @@
 package generators;
 
-
-
-
 import static org.junit.Assert.*;
 
 import java.util.List;
@@ -119,7 +116,6 @@ public class TestCalculateSize {
 	public void testInJavaTp3Example13Size(){
 		VideoGeneratorModel videoGen = new VideoGenHelper().loadVideoGenerator(URI.createURI("test-files/example13.videogen"));
 		CalculateSizes calculateSizes = new CalculateSizes(videoGen);
-		String csv = calculateSizes.toCSV();
 		List<Possibility> possibilities = calculateSizes.getPossibilities();
 		assertEquals(UtilsTest.nbPossibilities(videoGen), possibilities.size());
 	}

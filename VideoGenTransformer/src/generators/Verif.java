@@ -2,11 +2,9 @@ package generators;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-import javax.activity.InvalidActivityException;
-
-import org.eclipse.emf.common.util.EList;
 
 import exceptions.FileNotFoundException;
 import exceptions.IdAlreadyExists;
@@ -63,7 +61,7 @@ public class Verif{
 	}
 
 	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws IdAlreadyExists, InvalidProbability, FileNotFoundException {
-		verifProbability(alternativesMedia.getMedias());
+		verifProbability(alternativesMedia.getMedias().listIterator());
 		for(MediaDescription mediaDescription : alternativesMedia.getMedias()) {
 			visitMediaDescription(mediaDescription);
 		}
@@ -108,9 +106,11 @@ public class Verif{
 		}
 	}
 	
-	private void verifProbability(EList<MediaDescription> mediaDescriptions) throws InvalidProbability {
+	private void verifProbability(Iterator<MediaDescription> iteratorMediaDescriptions) throws InvalidProbability {
 		int sumProbability = 0;
-		for(MediaDescription mediaDescription: mediaDescriptions) {
+		MediaDescription mediaDescription;
+		while(iteratorMediaDescriptions.hasNext()) {
+			mediaDescription = iteratorMediaDescriptions.next();
 			if(mediaDescription instanceof VideoDescription) {
 				VideoDescription videoDescription = (VideoDescription) mediaDescription;
 				sumProbability += videoDescription.getProbability();

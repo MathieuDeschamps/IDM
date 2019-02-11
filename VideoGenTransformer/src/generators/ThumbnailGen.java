@@ -1,11 +1,7 @@
 package generators;
 
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-
 import exceptions.FfmpegException;
-import exceptions.ImageNotGenerated;
 import fr.istic.videoGen.AlternativesMedia;
 import fr.istic.videoGen.MandatoryMedia;
 import fr.istic.videoGen.Media;

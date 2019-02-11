@@ -1,17 +1,13 @@
 package generators;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 import org.eclipse.emf.common.util.URI;
 import org.junit.Test;
 
-import exceptions.FfmpegException;
-import generators.VideoGenHelper;
-import model.Possibility;
 import fr.istic.videoGen.VideoGeneratorModel;
-import generators.PlaylistGen;
+import model.Possibility;
 import tools.Ffmpeg;
-import tools.Utils;
-import tools.UtilsTest;
 
 public class TestPlaylistGenBis {
 

@@ -1,19 +1,13 @@
 package model;
 
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.eclipse.emf.common.util.EList;
-
 import exceptions.FfmpegException;
-import fr.istic.videoGen.AlternativesMedia;
 import fr.istic.videoGen.ImageDescription;
-import fr.istic.videoGen.MandatoryMedia;
 import fr.istic.videoGen.MediaDescription;
-import fr.istic.videoGen.OptionalMedia;
 import fr.istic.videoGen.VideoDescription;
 import tools.Ffmpeg;
 
@@ -144,12 +138,6 @@ public class Possibility {
 	public String toFfmpeg(String parentPath) {
 		String result = "";
 		for(MediaDescription mediaDescription : possibility) {
-			String id ="";
-			if(mediaDescription instanceof VideoDescription) {
-				id = ((VideoDescription) mediaDescription).getVideoid();
-			}else if (mediaDescription instanceof ImageDescription){
-				id = ((ImageDescription) mediaDescription).getImageid();
-			}
 			result += "file\t" + parentPath + mediaDescription.getLocation() + "\n";
 		}
 		return result;

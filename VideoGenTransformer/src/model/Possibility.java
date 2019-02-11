@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import org.eclipse.emf.common.util.EList;
 
+import exceptions.FfmpegException;
 import fr.istic.videoGen.AlternativesMedia;
 import fr.istic.videoGen.ImageDescription;
 import fr.istic.videoGen.MandatoryMedia;
@@ -76,7 +77,12 @@ public class Possibility {
 		for(MediaDescription mediaDescription: possibility) {
 			if(mediaDescription instanceof VideoDescription) {
 				VideoDescription videoDescription = (VideoDescription) mediaDescription;
-				duration += Ffmpeg.getDuration(videoDescription.getLocation());
+				try {
+					duration += Ffmpeg.getDuration(videoDescription.getLocation());
+				} catch (FfmpegException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}else if(mediaDescription instanceof ImageDescription){
 				
 			}

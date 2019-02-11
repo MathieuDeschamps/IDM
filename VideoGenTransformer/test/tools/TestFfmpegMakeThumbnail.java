@@ -5,30 +5,30 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import exceptions.ImageNotGenerated;
 import tools.Ffmpeg;
 import tools.Utils;
 
 public class TestFfmpegMakeThumbnail {
 	
 	@Test 
-	public void testAWetHawk() throws ImageNotGenerated {
+	public void testAWetHawk() throws Exception {
 		String inputPath =  "res/videos/A_Wet_Hawk.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
 		Ffmpeg.makeThumbnails(inputPath, videoDuration, "res/thumbnails/A_Wet_Hawk.png");
 	}
 	
-	@Test
-	public void testBearInAForest() throws ImageNotGenerated {
+	@Test (expected = Exception.class)
+	public void testBearInAForest() throws Exception {
 		String inputPath =  "res/videos/Bear_In_A_Forest.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
-		String videoDuration = Utils.formatHHmmss(duration - 1);
+		String videoDuration = Utils.formatHHmmss(duration + 1);
 		Ffmpeg.makeThumbnails(inputPath, videoDuration, "res/thumbnails/Bear_In_A_Forest.png");
+		fail("The exception was not thrown");
 	}
 	
 	@Test
-	public void testBokehVideoOfLeaves() throws ImageNotGenerated {
+	public void testBokehVideoOfLeaves() throws Exception {
 		String inputPath =  "res/videos/Bokeh_Video_Of_Leaves.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -36,7 +36,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testCoffeeMachineDispensingCoffee() throws ImageNotGenerated {
+	public void testCoffeeMachineDispensingCoffee() throws Exception {
 		String inputPath =  "res/videos/Coffee_Machine_Dispensing_Coffee.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -44,7 +44,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testCuteCatFallingAsleep() throws ImageNotGenerated {
+	public void testCuteCatFallingAsleep() throws Exception {
 		String inputPath =  "res/videos/Cute_Cat_Falling_Asleep.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -52,23 +52,24 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testPexelsVideos4335() throws ImageNotGenerated {
+	public void testPexelsVideos4335() throws Exception {
 		String inputPath =  "res/videos/Pexels_Videos_4335.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
 		Ffmpeg.makeThumbnails(inputPath, videoDuration, "res/thumbnails/Pexels_Videos_4335.png");
 	}
 	
-	@Test
-	public void testPexelsVideos1562544() throws ImageNotGenerated {
+	@Test (expected = Exception.class)
+	public void testPexelsVideos1562544() throws Exception {
 		String inputPath =  "res/videos/Pexels_Videos_1562544.mp4";
 		int duration = Ffmpeg.getDuration("res/videos/Pexels_Videos_1562544.mp4");
-		String videoDuration = Utils.formatHHmmss(duration - 1);
+		String videoDuration = Utils.formatHHmmss(duration);
 		Ffmpeg.makeThumbnails(inputPath, videoDuration, "res/thumbnails/Pexels_Videos_1562544.png");
+		fail("The exception was not thrown");
 	}
 	
 	@Test
-	public void testVideo_Of_Camels() throws ImageNotGenerated {
+	public void testVideo_Of_Camels() throws Exception {
 		String inputPath =  "res/videos/Video_Of_Camels.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -76,7 +77,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testVideo_Of_People_Walking() throws ImageNotGenerated {
+	public void testVideo_Of_People_Walking() throws Exception {
 		String inputPath =  "res/videos/Video_Of_People_Walking.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -84,7 +85,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testBraavos() throws ImageNotGenerated {
+	public void testBraavos() throws Exception {
 		String inputPath =  "res/genGOT/Braavos.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -92,7 +93,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testDorne() throws ImageNotGenerated {
+	public void testDorne() throws Exception {
 		String inputPath =  "res/genGOT/Dorne.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -100,7 +101,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testDragonstone() throws ImageNotGenerated {
+	public void testDragonstone() throws Exception {
 		String inputPath =  "res/genGOT/Dragonstone.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -108,7 +109,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testEastwatch() throws ImageNotGenerated {
+	public void testEastwatch() throws Exception {
 		String inputPath =  "res/genGOT/Eastwatch.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -116,7 +117,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testEnding() throws ImageNotGenerated {
+	public void testEnding() throws Exception {
 		String inputPath =  "res/genGOT/Ending.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -124,7 +125,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testHarrenhal() throws ImageNotGenerated {
+	public void testHarrenhal() throws Exception {
 		String inputPath =  "res/genGOT/Harrenhal.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -132,7 +133,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testKing_s_Landing() throws ImageNotGenerated {
+	public void testKing_s_Landing() throws Exception {
 		String inputPath =  "res/genGOT/King_s_Landing.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -140,7 +141,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testMeereen() throws ImageNotGenerated {
+	public void testMeereen() throws Exception {
 		String inputPath =  "res/genGOT/Meereen.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -148,7 +149,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testMoatCailin() throws ImageNotGenerated {
+	public void testMoatCailin() throws Exception {
 		String inputPath =  "res/genGOT/Moat_Cailin.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -156,7 +157,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testOldtown() throws ImageNotGenerated {
+	public void testOldtown() throws Exception {
 		String inputPath =  "res/genGOT/Oldtown.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -164,7 +165,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testOpening() throws ImageNotGenerated {
+	public void testOpening() throws Exception {
 		String inputPath =  "res/genGOT/Opening.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -172,7 +173,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testPentos() throws ImageNotGenerated {
+	public void testPentos() throws Exception {
 		String inputPath =  "res/genGOT/Pentos.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -180,7 +181,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testPyke() throws ImageNotGenerated {
+	public void testPyke() throws Exception {
 		String inputPath =  "res/genGOT/Pyke.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -188,7 +189,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testQarth() throws ImageNotGenerated {
+	public void testQarth() throws Exception {
 		String inputPath =  "res/genGOT/Qarth.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -196,7 +197,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testRiverrun() throws ImageNotGenerated {
+	public void testRiverrun() throws Exception {
 		String inputPath =  "res/genGOT/Riverrun.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -204,7 +205,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testTheEyrie() throws ImageNotGenerated {
+	public void testTheEyrie() throws Exception {
 		String inputPath =  "res/genGOT/The_Eyrie.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -212,7 +213,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testTheTwins() throws ImageNotGenerated {
+	public void testTheTwins() throws Exception {
 		String inputPath =  "res/genGOT/The_Twins.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -220,14 +221,14 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testTheWall() throws ImageNotGenerated {
+	public void testTheWall() throws Exception {
 		String inputPath =  "res/genGOT/The_Wall.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
 		Ffmpeg.makeThumbnails(inputPath, videoDuration, "res/thumbnails/The_Wall.png");
 	}
 	@Test
-	public void testVaesDothrak() throws ImageNotGenerated {
+	public void testVaesDothrak() throws Exception {
 		String inputPath =  "res/genGOT/Vaes_Dothrak.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -235,7 +236,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testWinterfell() throws ImageNotGenerated {
+	public void testWinterfell() throws Exception {
 		String inputPath =  "res/genGOT/Winterfell.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -243,7 +244,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testWinterfellBurning() throws ImageNotGenerated {
+	public void testWinterfellBurning() throws Exception {
 		String inputPath =  "res/genGOT/Winterfell_burning.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);
@@ -251,7 +252,7 @@ public class TestFfmpegMakeThumbnail {
 	}
 	
 	@Test
-	public void testYunkai() throws ImageNotGenerated {
+	public void testYunkai() throws Exception {
 		String inputPath =  "res/genGOT/Yunkai.mp4";
 		int duration = Ffmpeg.getDuration(inputPath);
 		String videoDuration = Utils.formatHHmmss(duration - 1);

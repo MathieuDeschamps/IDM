@@ -10,7 +10,7 @@ import java.util.Optional;
 
 import org.eclipse.emf.common.util.URI;
 
-import exceptions.VideoNotGenerated;
+import exceptions.FfmpegException;
 import fr.istic.videoGen.AlternativesMedia;
 import fr.istic.videoGen.ImageDescription;
 import fr.istic.videoGen.MandatoryMedia;
@@ -89,7 +89,7 @@ public class PlaylistGen implements VisitorVideoGen{
 		return playlist;
 	}
 	
-	public void genPlaylist(String playlistName) throws VideoNotGenerated{
+	public void genPlaylist(String playlistName) throws FfmpegException{
 		Possibility parsePossibility = playlist.toPlaylist();
 		Optional<MediaDescription> optional = parsePossibility.get(0);
 		

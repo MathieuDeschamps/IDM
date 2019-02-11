@@ -4,6 +4,7 @@ package generators;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 
+import exceptions.FfmpegException;
 import exceptions.ImageNotGenerated;
 import fr.istic.videoGen.AlternativesMedia;
 import fr.istic.videoGen.MandatoryMedia;
@@ -15,14 +16,19 @@ import fr.istic.videoGen.VideoGeneratorModel;
 import tools.Ffmpeg;
 import tools.Utils;
 
-public class ThumbnailGen implements VisitorVideoGen{
+public class ThumbnailGen{
+	
+	VideoGeneratorModel videoGeneratorModel;
 	
 	public ThumbnailGen(VideoGeneratorModel videoGeneratorModel) {
+		this.videoGeneratorModel = videoGeneratorModel;
+	}
+	
+	public void process() throws FfmpegException {
 		visitVideoGeneratorModel(videoGeneratorModel);
 	}
 	
-	@Override
-	public void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) {
+	public void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) throws FfmpegException {
 		for(Media media: videoGeneratorModel.getMedias()) {
 			if(media instanceof MandatoryMedia){
 				visitMandatoryMedia((MandatoryMedia) media);
@@ -34,24 +40,21 @@ public class ThumbnailGen implements VisitorVideoGen{
 		}
 	}
 
-	@Override
-	public void visitMandatoryMedia(MandatoryMedia mandatoryMedia) {
+	public void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws FfmpegException {
 		MediaDescription mediaDescription = mandatoryMedia.getDescription();
 		if(mediaDescription instanceof VideoDescription) {
 			visitVideoDescription((VideoDescription) mediaDescription);
 		}
 	}
 
-	@Override
-	public void visitOptionalMedia(OptionalMedia optionalMedia) {
+	public void visitOptionalMedia(OptionalMedia optionalMedia) throws FfmpegException {
 		MediaDescription mediaDescription = optionalMedia.getDescription();
 		if(mediaDescription instanceof VideoDescription) {
 			visitVideoDescription((VideoDescription) mediaDescription);
 		}
 	}
 
-	@Override
-	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) {
+	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws FfmpegException {
 		for(MediaDescription mediaDescription : alternativesMedia.getMedias()) {
 			if(mediaDescription instanceof VideoDescription) {
 				visitVideoDescription((VideoDescription) mediaDescription);
@@ -59,7 +62,7 @@ public class ThumbnailGen implements VisitorVideoGen{
 		}	
 	}
 	
-	public void visitVideoDescription(VideoDescription videoDescription) {
+	public void visitVideoDescription(VideoDescription videoDescription) throws FfmpegException {
 		String locationVideo = videoDescription.getLocation();
 		Integer seconds = videoDescription.getDuration();
 		if(seconds == 0) {
@@ -70,12 +73,8 @@ public class ThumbnailGen implements VisitorVideoGen{
 		}
 		String duration = Utils.formatHHmmss(seconds);
 		String outputPath = "res/thumbnails/"+ videoDescription.getVideoid() + ".png";
-		try {
-			Ffmpeg.makeThumbnails(locationVideo, duration, outputPath);
-		} catch (ImageNotGenerated e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Ffmpeg.makeThumbnails(locationVideo, duration, outputPath);
+		
 	}
 
 }

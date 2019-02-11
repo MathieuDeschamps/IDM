@@ -1,6 +1,6 @@
 package generators;
 
-import exceptions.VideoNotGenerated;
+import exceptions.FfmpegException;
 import fr.istic.videoGen.AlternativesMedia;
 import fr.istic.videoGen.MandatoryMedia;
 import fr.istic.videoGen.Media;
@@ -18,11 +18,11 @@ public class Converter{
 		this.videoGeneratorModel = videoGeneratorModel;
 	}
 	
-	public void process() throws VideoNotGenerated {
+	public void process() throws FfmpegException {
 		visitVideoGeneratorModel(videoGeneratorModel);
 	}
 	
-	public void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) throws VideoNotGenerated {
+	public void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) throws FfmpegException {
 		for(Media media: videoGeneratorModel.getMedias()) {
 			if(media instanceof MandatoryMedia){
 				visitMandatoryMedia((MandatoryMedia) media);
@@ -34,21 +34,21 @@ public class Converter{
 		}
 	}
 
-	public void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws VideoNotGenerated {
+	public void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws FfmpegException {
 		MediaDescription mediaDescription = mandatoryMedia.getDescription();
 		if(mediaDescription instanceof VideoDescription) {
 			visitVideoDescription((VideoDescription) mediaDescription);
 		}
 	}
 
-	public void visitOptionalMedia(OptionalMedia optionalMedia) throws VideoNotGenerated {
+	public void visitOptionalMedia(OptionalMedia optionalMedia) throws FfmpegException {
 		MediaDescription mediaDescription = optionalMedia.getDescription();
 		if(mediaDescription instanceof VideoDescription) {
 			visitVideoDescription((VideoDescription) mediaDescription);
 		}
 	}
 
-	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws VideoNotGenerated {
+	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws FfmpegException {
 		for(MediaDescription mediaDescription : alternativesMedia.getMedias()) {
 			if(mediaDescription instanceof VideoDescription) {
 				visitVideoDescription((VideoDescription) mediaDescription);
@@ -56,12 +56,12 @@ public class Converter{
 		}
 	}
 	
-	private void visitVideoDescription(VideoDescription mediaDescription) throws VideoNotGenerated {
+	private void visitVideoDescription(VideoDescription mediaDescription) throws FfmpegException {
 		String inputPath = mediaDescription.getLocation();
 		int beginExtension = inputPath.lastIndexOf('.');
-		int beginMedia = inputPath.lastIndexOf('/');
+		int beginFile = inputPath.lastIndexOf('/') + 1;
 		String extension = inputPath.substring(beginExtension);
-		String name = inputPath.substring(beginMedia, beginExtension);
+		String name = inputPath.substring(beginFile, beginExtension);
 		String outputPath = "res/videos/" + name + "_gen" + extension;
 		Ffmpeg.formatVideo(inputPath, outputPath);
 		mediaDescription.setLocation(outputPath);

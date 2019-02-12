@@ -13,7 +13,7 @@ public class TestConverter {
 	public void example1Converter() throws Exception {
 		VideoGeneratorModel videoGen = new VideoGenHelper().loadVideoGenerator(URI.createURI("test-files/example1.videogen"));
 		assertNotNull(videoGen);	
-		Converter converter = new Converter(videoGen);
+		ConverterToMp4 converter = new ConverterToMp4(videoGen);
 		converter.process();
 
 	}

@@ -18,12 +18,12 @@ import fr.istic.videoGen.OptionalMedia;
 import fr.istic.videoGen.VideoDescription;
 import fr.istic.videoGen.VideoGeneratorModel;
 
-public class Verif{
+public class Verify{
 	
 	List<String> idTable;
 	VideoGeneratorModel videoGeneratorModel;
 	
-	public Verif(VideoGeneratorModel videoGeneratorModel) {
+	public Verify(VideoGeneratorModel videoGeneratorModel) {
 		idTable = new ArrayList<>();
 		this.videoGeneratorModel = videoGeneratorModel;
 	}

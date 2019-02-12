@@ -13,5 +13,6 @@ Require-Bundle: com.google.guava,
  fr.istic.videogen.ide;bundle-version="1.0.0",
  fr.istic.videogen.tests;bundle-version="1.0.0",
  fr.istic.videogen.ui;bundle-version="1.0.0"
-Import-Package: org.eclipse.core.resources
+Import-Package: org.apache.commons.cli;version="1.2.0",
+ org.eclipse.core.resources
 

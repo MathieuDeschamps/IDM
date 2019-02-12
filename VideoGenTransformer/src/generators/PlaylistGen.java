@@ -23,10 +23,15 @@ import tools.Ffmpeg;
 public class PlaylistGen implements VisitorVideoGen{
 
 	private Possibility playlist;
+	private VideoGeneratorModel videoGeneratorModel;
 	
 	public PlaylistGen(VideoGeneratorModel videoGeneratorModel) {
+		this.videoGeneratorModel = videoGeneratorModel;
+	}
+	
+	public void process() {
 		playlist = new Possibility();
-		visitVideoGeneratorModel(videoGeneratorModel);
+		visitVideoGeneratorModel(videoGeneratorModel);		
 	}
 	
 	@Override
@@ -86,8 +91,13 @@ public class PlaylistGen implements VisitorVideoGen{
 	public Possibility getPlaylist() {
 		return playlist;
 	}
-	
-	public void genPlaylist(String playlistName) throws FfmpegException{
+	/**
+	 * 
+	 * @param playlistName
+	 * @return the path of the playlist
+	 * @throws FfmpegException
+	 */
+	public Optional<String> genPlaylist(String playlistName) throws FfmpegException{
 		Possibility parsePossibility = playlist.toPlaylist();
 		Optional<MediaDescription> optional = parsePossibility.get(0);
 		
@@ -105,9 +115,10 @@ public class PlaylistGen implements VisitorVideoGen{
 				writer.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				return;
 			}
 			Ffmpeg.concatVideos(inputPath, outputPath);
+			return Optional.of(outputPath);
 		}
+		return Optional.empty();
 	}
 }

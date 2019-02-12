@@ -10,11 +10,11 @@ import fr.istic.videoGen.VideoDescription;
 import fr.istic.videoGen.VideoGeneratorModel;
 import tools.Ffmpeg;
 
-public class Converter{
+public class ConverterToMp4{
 	
 	private VideoGeneratorModel videoGeneratorModel;
 	
-	public Converter(VideoGeneratorModel videoGeneratorModel) {
+	public ConverterToMp4(VideoGeneratorModel videoGeneratorModel) {
 		this.videoGeneratorModel = videoGeneratorModel;
 	}
 	
@@ -60,9 +60,8 @@ public class Converter{
 		String inputPath = mediaDescription.getLocation();
 		int beginExtension = inputPath.lastIndexOf('.');
 		int beginFile = inputPath.lastIndexOf('/') + 1;
-		String extension = inputPath.substring(beginExtension);
 		String name = inputPath.substring(beginFile, beginExtension);
-		String outputPath = "res/videos/" + name + "_gen" + extension;
+		String outputPath = "res/videos/" + name + "_gen.mp4";
 		Ffmpeg.formatVideo(inputPath, outputPath);
 		mediaDescription.setLocation(outputPath);
 	}

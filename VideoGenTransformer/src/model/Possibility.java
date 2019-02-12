@@ -54,6 +54,22 @@ public class Possibility {
 		}
 	}
 	
+	public boolean containsFile(String fileName) {
+		for(MediaDescription mediaDescription : possibility) {
+			int beginFileName = mediaDescription.getLocation().lastIndexOf('/');
+			String name;
+			if(beginFileName != -1) {
+				name = mediaDescription.getLocation().substring(beginFileName + 1);
+			}else {
+				name = mediaDescription.getLocation();
+			}			
+			if(name.equals(fileName)){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public int size() {
 		int size = 0;
 		File file;

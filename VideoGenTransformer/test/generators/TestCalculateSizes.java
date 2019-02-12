@@ -14,7 +14,7 @@ import generators.CalculateSizes;
 import tools.Utils;
 import tools.UtilsTest;
 
-public class TestCalculateSize {
+public class TestCalculateSizes {
 
 	@Test
 	public void testInJavaTp3Example1Size(){

@@ -99,7 +99,7 @@ public class CalculateSizes implements VisitorVideoGen{
 		}
 		return result;
 	}
-	
+		
 	public String toCSV() {
 		String result = "";
 		int count = 1;

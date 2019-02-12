@@ -43,7 +43,7 @@ public class Ffmpeg {
 			Process process = Runtime.getRuntime().exec(command);
 			process.waitFor();
 			File video = new File(outputPath);
-			if(!!video.exists()) {
+			if(!video.exists()) {
 				throw new FfmpegException("Impossible to generate the concatenation to " + outputPath);
 			}
 		} catch (IOException e) {

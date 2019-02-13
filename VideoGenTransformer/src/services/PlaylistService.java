@@ -1,5 +1,6 @@
-package app;
+package services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,7 +14,7 @@ import generators.Verify;
 import generators.VideoGenHelper;
 import model.Possibility;
 
-public class Runner {
+public class PlaylistService {
 	
 	private static final int NB_MAX_ITERATION_GEN_PLAYLIST = 100; 
 	
@@ -22,17 +23,18 @@ public class Runner {
 	/**
 	 * @param pathSpecsFile the path to the file (.videogen)
 	 */
-	public Runner(String pathSpecsFile) {
+	public PlaylistService(String pathSpecsFile) {
 		this.videoGeneratorModel = new VideoGenHelper().loadVideoGenerator(URI.createURI(pathSpecsFile));
 	}
 	
 	/**
 	 * Methods called by the JHipster application
 	 * @param fileNeeded the names of the file required in the playlist
-	 * @return optional which contains the output path of the playlist
+	 * @return the output path of the video
 	 */
-	public Optional<String> processPlaylist(List<String> fileRequired) {
-		String outputPath = "res/playlists/playlist_gen.mp4";
+	public String process(List<String> fileRequired) {
+		if(fileRequired == null) { fileRequired = new ArrayList<>();}
+		String outputPath = "";
 		PlaylistGen playlist = new PlaylistGen(videoGeneratorModel);
 		Possibility possibility;
 		int nbIteration = 0;
@@ -55,57 +57,58 @@ public class Runner {
 				nbIteration < NB_MAX_ITERATION_GEN_PLAYLIST);
 		// Generate the playlist with the possibilty
 		try {
-			return playlist.genPlaylist("playlist_gen");
+			Optional<String> optional = playlist.genPlaylist("playlist_gen");
+			if(optional.isPresent()) {
+				outputPath = optional.get();
+			}
 		} catch (FfmpegException e) {
 			System.err.println(e.getMessage());
-			return Optional.empty();
 		}
+		return outputPath;
 	}
 	
 	/**
-	 * Method call high scale tests
+	 * Method call by high scale tests
 	 * @param fileName the name of the output file
 	 * @param nbPlaylist the number of playlist to generate
+	 * @return list of the output path of the video 
 	 */
-	public void processPlaylist(String fileName, int nbPlaylist) {
-		String outputPath;
-		PlaylistGen playlist = new PlaylistGen(videoGeneratorModel);
-		for(int i = 0; i < nbPlaylist; i++) {
-			outputPath = "res/playlists/" + fileName + i + ".mp4";
-			try {
-				playlist.genPlaylist(outputPath);
-			} catch (FfmpegException e) {
-				System.err.println(e.getMessage());
-				Optional.empty();
-			}
-		}
-	}
-	
-	/**
-	 * Convert the path of videoseq media into mp4
-	 */
-	public void processConverterToMp4(){
-		ConverterToMp4 converter = new ConverterToMp4(videoGeneratorModel);
-		try {
-			converter.process();
-		} catch (FfmpegException e) {
-			System.out.println(e.getMessage());
-		}
-	}
-	
-	/**
-	 * Verify if the file (.videogen) match the requirement
-	 * @return true if the file macth the requirement
-	 * 			otherwise false and print the exception
-	 */
-	public boolean processVerify() {
+	public List<String> process(String fileName, int nbPlaylist) {
+		if(fileName == null) { fileName = "";}
+		
+		List<String> outputPaths = new ArrayList<>();
+		
+		// checks if the videoGeneratorModel match the requirement
 		Verify verify = new Verify(videoGeneratorModel);
 		try {
 			verify.process();
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
-			return false;
+			System.exit(1);
 		}
-		return true;
+		
+		// converts the videoseq media into .mp4
+		ConverterToMp4 converter = new ConverterToMp4(videoGeneratorModel);
+		try {
+			converter.process();
+		} catch (FfmpegException e) {
+			System.out.println(e.getMessage());
+			System.exit(1);
+		}
+		
+		// generate nb playlist with the videoGenModel
+		PlaylistGen playlist = new PlaylistGen(videoGeneratorModel);
+		Optional<String> outputPath; 
+		for(int i = 0; i < nbPlaylist; i++) {
+			try {
+				outputPath = playlist.genPlaylist(fileName + i);
+				if(outputPath.isPresent()) {
+					outputPaths.add(outputPath.get());
+				}
+			} catch (FfmpegException e) {
+				System.err.println(e.getMessage());
+			}
+		}
+		return outputPaths;
 	}
 }

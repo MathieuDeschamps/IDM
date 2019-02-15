@@ -5,7 +5,6 @@
     <groupId>com.m2.idm</groupId>
     <artifactId>idm</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
     <name>IDM</name>
 
     <repositories>
@@ -118,6 +117,8 @@
 	      <groupId>com.m2.idm</groupId>
 	      <artifactId>VideoGen</artifactId>
 	      <version>1.0.0</version>
+	  	  <scope>system</scope>
+	      <systemPath>/home/jeremy/Programmation/dsl/teaching-MDE-IL1819/VideoGenTransformer.jar</systemPath>
 		</dependency>
         <dependency>
             <groupId>io.github.jhipster</groupId>

@@ -13,6 +13,9 @@ export class HomeComponent implements OnInit {
     account: Account;
     modalRef: NgbModalRef;
     checks: any[];
+    value1: String;
+    value2: String;
+    src:String;
 
     
 
@@ -50,24 +53,16 @@ export class HomeComponent implements OnInit {
     }
 
     generate(){
-        let ids = '';
-        for (let i = 1; i < this.checks.length; i++) {
-            if( this.checks[i] )
-            {
-                ids = ids + i + ",";
-            }
-        };
-        console.log(ids);
-        ids = ids.substring(0, ids.length - 1);
-        //video.src = 'http://localhost:8080/api/video/' + ids;
+        
+        this.src = 'http://localhost:8080/api/video/' + this.value1 +","+this.value2;
+        console.log(this.src);
     }
 
-    check1(event){      
-        this.checks[event.target.id] = event.target.checked;
-       
+    check3(event){
+        this.value1 = event.target.id;
     }
 
     check2(event){
-        
+        this.value2 = event.target.id;
     }
 }

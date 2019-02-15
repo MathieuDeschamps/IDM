@@ -28,15 +28,15 @@
                     </div>
                 </div>
                 <fieldset id="group1">
-                    <input type="radio" id="DragonStone"  [(ngModel)]="check1" (change)="check1($event)" value="Dragonstone">
+                    <input type="radio" id="DragonStone" name="value1"  [(ngModel)]="check1" (change)="check3($event)" value="Dragonstone">
                     <label for="Dragonstone">Dragonstone</label>
-                    <input type="radio" id="Harrenhal"  [(ngModel)]="check2" (change)="check1($event)" value="Harrenhal">
+                    <input type="radio" id="Harrenhal"  name="value1" [(ngModel)]="check2" (change)="check3($event)" value="Harrenhal">
                     <label for="Harrenhal">Harrenhal</label>
-                    <input type="radio" id="Pyke"  [(ngModel)]="check3" (change)="check1($event)" value="Pyke">
+                    <input type="radio" id="Pyke"  name="value1" [(ngModel)]="check3" (change)="check3($event)" value="Pyke">
                     <label for="Pyke">Pyke</label>                                        
-                    <input type="radio" id="Riverrun"  [(ngModel)]="check4" (change)="check1($event)" value="Riverrun">
+                    <input type="radio" id="Riverrun"   name="value1" [(ngModel)]="check4" (change)="check3($event)" value="Riverrun">
                     <label for="Riverrun">riverrun</label>
-                    <input type="radio" id="The_Eyrie"  [(ngModel)]="check5" (change)="check1($event)" value="The_Eyrie">
+                    <input type="radio" id="The_Eyrie"   name="value1"[(ngModel)]="check5" (change)="check3($event)" value="The_Eyrie">
                     <label for="The_Eyrie">The Eyrie</label>
                 </fieldset>
                 <p>Choisissez une vidéo parmis:</p>
@@ -55,19 +55,19 @@
                     </div>
                 </div>
                 <fieldset id="group2">
-                    <input type="radio" id="Braavos" value="Braavos"  [(ngModel)]="check6" (change)="check2($event)">
+                    <input type="radio" id="Braavos" value="Braavos" name="value2"  [(ngModel)]="check6" (change)="check2($event)">
                     <label for="Braavos">Braavos</label>
-                    <input type="radio" id="Dorne" value="Dorne"  [(ngModel)]="check7" (change)="check2($event)">
+                    <input type="radio" id="Dorne" value="Dorne" name="value2"  [(ngModel)]="check7" (change)="check2($event)">
                     <label for="Dorne">Dorne</label>
-                    <input type="radio" id="Meereen" value="Meereen"  [(ngModel)]="check8" (change)="check2($event)">
+                    <input type="radio" id="Meereen" value="Meereen"  name="value2" [(ngModel)]="check8" (change)="check2($event)">
                     <label for="Meereen">Meereen</label>
-                    <input type="radio" id="Moat_Cailin" value="Moat_Cailin" [(ngModel)]="check9" (change)="check2($event)">
+                    <input type="radio" id="Moat_Cailin" value="Moat_Cailin"  name="value2" [(ngModel)]="check9" (change)="check2($event)">
                     <label for="Moat_Cailin">Moat Cailin</label>
                 </fieldset>
             </div>
             <a  class="btn btn-primary" id="generate" (click)="generate()">Generate</a>
             <video controls id='video' preload="metadata" width="100%" [(ngModel)]="video">
-                <source src="https://localhost:8080/api/video">
+                <source src="{{src}}">
             </video>
         </div>
     </div>

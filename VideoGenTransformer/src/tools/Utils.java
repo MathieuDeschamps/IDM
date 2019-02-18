@@ -2,11 +2,17 @@ package tools;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-
+/**
+ * Class which contains utils functions
+ */
 public class Utils{
 		
 	
-	
+	/**
+	 * Count the lines in a string
+	 * @param string
+	 * @return the number of lines
+	 */
 	public static int nbLignes(String string) {
 		if(string.equals("")) {
 			return 0;
@@ -18,6 +24,11 @@ public class Utils{
 		}
 	}
 	
+	/**
+	 * Format seconds into HH:mm:ss
+	 * @param seconds
+	 * @return
+	 */
 	public static String formatHHmmss(int seconds) {
 		// Calculate the seconds to displayed
 		int displayedSeconds = seconds % 60;
@@ -31,6 +42,11 @@ public class Utils{
 		return String.format("%02d:%02d:%02d", displayedHours, displayedMinutes, displayedSeconds);
 	}
 	
+	/**
+	 * Read the content of a buffered read
+	 * @param reader
+	 * @return the content into a string
+	 */
 	public static String readBufferReader(BufferedReader reader) {
 		StringBuilder builder = new StringBuilder();
 		String aux = "";
@@ -45,6 +61,5 @@ public class Utils{
 
 		String text = builder.toString();
 		return text;
-		
 	}
 }

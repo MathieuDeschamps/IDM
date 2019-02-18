@@ -12,6 +12,10 @@ import fr.istic.videoGen.VideoDescription;
 import fr.istic.videoGen.VideoGeneratorModel;
 import tools.Ffmpeg;
 
+/**
+ * Class which convert every videoseq into a mp4 video.
+ *
+ */
 public class ConverterToMp4{
 	
 	private VideoGeneratorModel videoGeneratorModel;
@@ -20,11 +24,15 @@ public class ConverterToMp4{
 		this.videoGeneratorModel = videoGeneratorModel;
 	}
 	
+	/**
+	 * Run the conversion
+	 * @throws FfmpegException if the conversion failed
+	 */
 	public void process() throws FfmpegException {
 		visitVideoGeneratorModel(videoGeneratorModel);
 	}
 	
-	public void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) throws FfmpegException {
+	private void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) throws FfmpegException {
 		for(Media media: videoGeneratorModel.getMedias()) {
 			if(media instanceof MandatoryMedia){
 				visitMandatoryMedia((MandatoryMedia) media);
@@ -36,21 +44,21 @@ public class ConverterToMp4{
 		}
 	}
 
-	public void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws FfmpegException {
+	private void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws FfmpegException {
 		MediaDescription mediaDescription = mandatoryMedia.getDescription();
 		if(mediaDescription instanceof VideoDescription) {
 			visitVideoDescription((VideoDescription) mediaDescription);
 		}
 	}
 
-	public void visitOptionalMedia(OptionalMedia optionalMedia) throws FfmpegException {
+	private void visitOptionalMedia(OptionalMedia optionalMedia) throws FfmpegException {
 		MediaDescription mediaDescription = optionalMedia.getDescription();
 		if(mediaDescription instanceof VideoDescription) {
 			visitVideoDescription((VideoDescription) mediaDescription);
 		}
 	}
 
-	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws FfmpegException {
+	private void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws FfmpegException {
 		for(MediaDescription mediaDescription : alternativesMedia.getMedias()) {
 			if(mediaDescription instanceof VideoDescription) {
 				visitVideoDescription((VideoDescription) mediaDescription);
@@ -65,6 +73,8 @@ public class ConverterToMp4{
 		String outputPath = inputPathWitoutExtension + "_conv.mp4";
 		File file = new File(outputPath);
 		System.out.println("-" + file.getName());
+		
+		// if the file had not been already converted
 		if(!file.exists()) {
 			Ffmpeg.formatVideo(inputPath, outputPath);
 		}		

@@ -12,6 +12,9 @@ import fr.istic.videoGen.VideoGeneratorModel;
 import tools.Ffmpeg;
 import tools.Utils;
 
+/**
+ * Class which generate the Thumbnails of a video gen model.
+ */
 public class ThumbnailGen{
 	
 	VideoGeneratorModel videoGeneratorModel;
@@ -20,6 +23,10 @@ public class ThumbnailGen{
 		this.videoGeneratorModel = videoGeneratorModel;
 	}
 	
+	/**
+	 * Run the generation of the thumbnails
+	 * @throws FfmpegException if the generation of the thumbnails encountered a problem
+	 */
 	public void process() throws FfmpegException {
 		visitVideoGeneratorModel(videoGeneratorModel);
 	}
@@ -36,21 +43,21 @@ public class ThumbnailGen{
 		}
 	}
 
-	public void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws FfmpegException {
+	private void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws FfmpegException {
 		MediaDescription mediaDescription = mandatoryMedia.getDescription();
 		if(mediaDescription instanceof VideoDescription) {
 			visitVideoDescription((VideoDescription) mediaDescription);
 		}
 	}
 
-	public void visitOptionalMedia(OptionalMedia optionalMedia) throws FfmpegException {
+	private void visitOptionalMedia(OptionalMedia optionalMedia) throws FfmpegException {
 		MediaDescription mediaDescription = optionalMedia.getDescription();
 		if(mediaDescription instanceof VideoDescription) {
 			visitVideoDescription((VideoDescription) mediaDescription);
 		}
 	}
 
-	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws FfmpegException {
+	private void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws FfmpegException {
 		for(MediaDescription mediaDescription : alternativesMedia.getMedias()) {
 			if(mediaDescription instanceof VideoDescription) {
 				visitVideoDescription((VideoDescription) mediaDescription);
@@ -58,7 +65,7 @@ public class ThumbnailGen{
 		}	
 	}
 	
-	public void visitVideoDescription(VideoDescription videoDescription) throws FfmpegException {
+	private void visitVideoDescription(VideoDescription videoDescription) throws FfmpegException {
 		String locationVideo = videoDescription.getLocation();
 		Integer seconds = videoDescription.getDuration();
 		if(seconds == 0) {

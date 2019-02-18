@@ -7,8 +7,18 @@ import java.io.InputStreamReader;
 
 import exceptions.FfmpegException;
 
+/**
+ * Class which executs ffmpeg commands
+ */
 public class Ffmpeg {
-
+	
+	/**
+	 * Makes a thumbnails of a video
+	 * @param inputPath the path of the video
+	 * @param videoDuration the duration the video
+	 * @param outputPath where is save the thumbnails
+	 * @throws FfmpegException if the thumbnails has not been generated
+	 */
 	public static void makeThumbnails(String inputPath, String videoDuration, String outputPath) throws FfmpegException {
 				
 		String command = "ffmpeg -y -i "; 
@@ -33,6 +43,12 @@ public class Ffmpeg {
 		}		
 	}
 	
+	/**
+	 * Generates the concatenation of videos
+	 * @param inputPath where is the text file with the list of video 
+	 * @param outputPath where is save the concatenation of video
+	 * @throws FfmpegException is the concatenation has not been generated
+	 */
 	public static void concatVideos(String inputPath, String outputPath) throws FfmpegException {
 		String command ="ffmpeg -f concat -safe 0 -i ";
 		command += inputPath;
@@ -55,6 +71,12 @@ public class Ffmpeg {
 		}
 	}
 	
+	/**
+	 * Gives the duration of a video
+	 * @param path where is the video
+	 * @return the duration of the video in seconds
+	 * @throws FfmpegException if the video has not been found
+	 */
 	public static int getDuration(String path) throws FfmpegException{
 		String command = "ffprobe -i "+ path + " -show_format ";
 		Process process = null;
@@ -91,6 +113,13 @@ public class Ffmpeg {
 		}
 	}
 	
+	/**
+	 * Format a video into mp4
+	 * @param inputPath where is the video to format
+	 * @param outputPath where is save the formatted videos
+	 * @throws FfmpegException if the video to format has not been found
+	 * 			or if the formatted video has not been generated
+	 */
 	public static void formatVideo(String inputPath, String outputPath) throws FfmpegException {
 		String command = "ffmpeg -i ";
 		command += inputPath;

@@ -62,7 +62,6 @@ public class main {
 
 	/**
 	 * Unzip all the file in the parentPath
-	 * 
 	 * @param parentPath
 	 * @param listOfZipFiles
 	 * @param outputFolder
@@ -118,7 +117,6 @@ public class main {
 
 	/**
 	 * Get all the path from the parentPath include until the file .videogen
-	 * 
 	 * @param parentPath
 	 * @return
 	 */
@@ -155,11 +153,16 @@ public class main {
 
 	}
 
-	private static List<ProjectVideoGen> genPlaylist(List<ProjectVideoGen> projectsVideoGen) {
-		if (projectsVideoGen == null) {
-			projectsVideoGen = new ArrayList<>();
+	/**
+	 * Generates the playlists for every projects
+	 * @param projects
+	 * @return the project list which contains the results of the playlist generation
+	 */
+	private static List<ProjectVideoGen> genPlaylist(List<ProjectVideoGen> projects) {
+		if (projects == null) {
+			projects = new ArrayList<>();
 		}
-		for (ProjectVideoGen project : projectsVideoGen) {
+		for (ProjectVideoGen project : projects) {
 			PlaylistService service = new PlaylistService(project.getPathVideoGenSpec());
 			service.process(project, project.getTitle());
 			if(project.hasError()) {
@@ -169,6 +172,6 @@ public class main {
 			}
 		}
 
-		return projectsVideoGen;
+		return projects;
 	}
 }

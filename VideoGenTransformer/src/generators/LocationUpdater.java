@@ -15,6 +15,9 @@ import fr.istic.videoGen.OptionalMedia;
 import fr.istic.videoGen.VideoDescription;
 import fr.istic.videoGen.VideoGeneratorModel;
 
+/**
+ * Class which update the location in relative path into absolute path
+ */
 public class LocationUpdater{
 
 	private VideoGeneratorModel videoGeneratorModel;
@@ -24,13 +27,18 @@ public class LocationUpdater{
 		this.parentPath = "";
 		this.videoGeneratorModel = videoGeneratorModel;
 	}
-
+	
+	/**
+	 * Run the location updater
+	 * @param parentPath path from the root
+	 * @throws FileNotFoundException  if an updated path are not valid
+	 */
 	public void process(String parentPath) throws FileNotFoundException {
 		this.parentPath = parentPath;
 		visitVideoGeneratorModel(videoGeneratorModel);
 	}
 
-	public void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) throws FileNotFoundException {
+	private void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) throws FileNotFoundException {
 		for (Media media : videoGeneratorModel.getMedias()) {
 			if (media instanceof MandatoryMedia) {
 				visitMandatoryMedia((MandatoryMedia) media);
@@ -43,7 +51,7 @@ public class LocationUpdater{
 
 	}
 
-	public void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws FileNotFoundException {
+	private void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws FileNotFoundException {
 		MediaDescription mediaDescription = mandatoryMedia.getDescription();
 		if (mediaDescription instanceof VideoDescription) {
 			visitVideoDescription((VideoDescription) mediaDescription);
@@ -52,12 +60,12 @@ public class LocationUpdater{
 		}
 	}
 
-	public void visitOptionalMedia(OptionalMedia optionalMedia) throws FileNotFoundException {
+	private void visitOptionalMedia(OptionalMedia optionalMedia) throws FileNotFoundException {
 		MediaDescription mediaDescription = optionalMedia.getDescription();
 		visitMediaDescription(mediaDescription);
 	}
 
-	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws FileNotFoundException {
+	private void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws FileNotFoundException {
 		for (MediaDescription mediaDescription : alternativesMedia.getMedias()) {
 			visitMediaDescription(mediaDescription);
 		}

@@ -18,6 +18,10 @@ import fr.istic.videoGen.OptionalMedia;
 import fr.istic.videoGen.VideoDescription;
 import fr.istic.videoGen.VideoGeneratorModel;
 
+/**
+ * Class which check if the video gen model match the requirement
+ *
+ */
 public class Verify{
 	
 	List<String> idTable;
@@ -28,12 +32,18 @@ public class Verify{
 		this.videoGeneratorModel = videoGeneratorModel;
 	}
 	
+	/**
+	 * Run the verifications
+	 * @throws IdAlreadyExists
+	 * @throws InvalidProbability
+	 * @throws FileNotFoundException
+	 */
 	public void process() throws IdAlreadyExists, InvalidProbability, FileNotFoundException {
 		visitVideoGeneratorModel(videoGeneratorModel);
 		
 	}
 	
-	public void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) throws IdAlreadyExists, InvalidProbability, FileNotFoundException {
+	private void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) throws IdAlreadyExists, InvalidProbability, FileNotFoundException {
 		for(Media media: videoGeneratorModel.getMedias()) {
 			if(media instanceof MandatoryMedia){
 				visitMandatoryMedia((MandatoryMedia) media);
@@ -46,7 +56,7 @@ public class Verify{
 		
 	}
 
-	public void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws IdAlreadyExists, FileNotFoundException {
+	private void visitMandatoryMedia(MandatoryMedia mandatoryMedia) throws IdAlreadyExists, FileNotFoundException {
 		MediaDescription mediaDescription = mandatoryMedia.getDescription();
 		if(mediaDescription instanceof VideoDescription) {
 			visitVideoDescription((VideoDescription) mediaDescription);
@@ -55,12 +65,12 @@ public class Verify{
 		}
 	}
 
-	public void visitOptionalMedia(OptionalMedia optionalMedia) throws IdAlreadyExists, InvalidProbability, FileNotFoundException {
+	private void visitOptionalMedia(OptionalMedia optionalMedia) throws IdAlreadyExists, InvalidProbability, FileNotFoundException {
 		MediaDescription mediaDescription = optionalMedia.getDescription();
 		visitMediaDescription(mediaDescription);
 	}
 
-	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws IdAlreadyExists, InvalidProbability, FileNotFoundException {
+	private void visitAlternativeMedia(AlternativesMedia alternativesMedia) throws IdAlreadyExists, InvalidProbability, FileNotFoundException {
 		verifProbability(alternativesMedia.getMedias().listIterator());
 		for(MediaDescription mediaDescription : alternativesMedia.getMedias()) {
 			visitMediaDescription(mediaDescription);
@@ -90,7 +100,11 @@ public class Verify{
 	}
 	
 
-	
+	/**
+	 * run the verification on the id
+	 * @param newId
+	 * @throws IdAlreadyExists if the new id is already in idTable
+	 */
 	private void verifId(String newId) throws IdAlreadyExists {
 		if(newId != null) {
 			if(idTable.contains(newId)){
@@ -101,13 +115,22 @@ public class Verify{
 		}
 	}
 	
+	/**
+	 * run the verification on the location
+	 * @param location
+	 * @throws FileNotFoundException if none file are at the location
+	 */
 	private void verifLocation(String location) throws FileNotFoundException {
 		File mediaFile = new File(location);
 		if(!mediaFile.exists()) {
 			throw new FileNotFoundException("Verif: file not found " + location + ".");
 		}
 	}
-	
+	/**
+	 * run the verification about probability for several mediaDescription
+	 * @param iteratorMediaDescriptions
+	 * @throws InvalidProbability if the sum of probability goes over 100 
+	 */
 	private void verifProbability(Iterator<MediaDescription> iteratorMediaDescriptions) throws InvalidProbability {
 		int sumProbability = 0;
 		MediaDescription mediaDescription;
@@ -123,6 +146,11 @@ public class Verify{
 		}
 	}
 	
+	/**
+	 * run the verification about probability for one media
+	 * @param mediaDescription
+	 * @throws InvalidProbability if the probability goes over 100
+	 */
 	private void verifProbability(MediaDescription mediaDescription) throws InvalidProbability {
 		if(mediaDescription instanceof VideoDescription){
 			VideoDescription videoDescription = (VideoDescription) mediaDescription;

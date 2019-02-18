@@ -13,7 +13,10 @@ import fr.istic.videoGen.VideoDescription;
 import fr.istic.videoGen.VideoGeneratorModel;
 import model.Possibility;
 
-public class CalculateSizes implements VisitorVideoGen{
+/**
+ * Class which list all the possibilities of a video gen and their size
+ */
+public class CalculateSizes{
 
 	private List<String> mediaIds;
 	private List<Possibility> possibilites;
@@ -23,16 +26,18 @@ public class CalculateSizes implements VisitorVideoGen{
 		mediaIds = new ArrayList<>();
 		possibilites = new ArrayList<>();
 		// init with a empty possibility
-		possibilites.add(new Possibility());
-		
+		possibilites.add(new Possibility());		
 		visitVideoGeneratorModel(videoGen);
 	}
 	
+	/**
+	 * @return All the possibilities of video gen
+	 */
 	public List<Possibility> getPossibilities() {
 		return this.possibilites;
 	}
 	
-	public void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) {
+	private void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) {
 		for(Media media : videoGeneratorModel.getMedias()) {
 			if(media instanceof MandatoryMedia) {
 				visitMandatoryMedia((MandatoryMedia) media);
@@ -44,7 +49,7 @@ public class CalculateSizes implements VisitorVideoGen{
 		}
 	}
 
-	public void visitMandatoryMedia(MandatoryMedia mandatoryMedia) {
+	private void visitMandatoryMedia(MandatoryMedia mandatoryMedia) {
 		MediaDescription mediaDescription = mandatoryMedia.getDescription() ;
 		if(mediaDescription instanceof VideoDescription) {
 			mediaIds.add(((VideoDescription) mediaDescription).getVideoid());
@@ -54,7 +59,7 @@ public class CalculateSizes implements VisitorVideoGen{
 		}		
 	}
 	
-	public void visitOptionalMedia(OptionalMedia optionalMedia) {
+	private void visitOptionalMedia(OptionalMedia optionalMedia) {
 		MediaDescription mediaDescription = optionalMedia.getDescription() ;
 		if(mediaDescription instanceof VideoDescription) {
 			mediaIds.add(((VideoDescription) mediaDescription).getVideoid());
@@ -68,7 +73,7 @@ public class CalculateSizes implements VisitorVideoGen{
 		}	
 	}
 	
-	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) {
+	private void visitAlternativeMedia(AlternativesMedia alternativesMedia) {
 		// the list which will contains the possibilities
 		List<Possibility> newPossibilities = new ArrayList<>();
 		
@@ -91,15 +96,23 @@ public class CalculateSizes implements VisitorVideoGen{
 		// change the possibilities with the new possibilities
 		possibilites = newPossibilities;
 	}
-		
-	private List<Possibility> clonedPossibilities(List<Possibility> possibilites2) {
+	
+	/**
+	 * Cloned a list of possibilities
+	 * @param possibilitesToCloned
+	 * @return the cloned list of posibilites
+	 */
+	private List<Possibility> clonedPossibilities(List<Possibility> possibilitesToCloned) {
 		List<Possibility> result = new ArrayList<>();
-		for(Possibility possibility : possibilites2) {
+		for(Possibility possibility : possibilitesToCloned) {
 			result.add(possibility.clone());
 		}
 		return result;
 	}
-		
+	
+	/**
+	 * @return String on CSV format which contains the possibilities and their size
+	 */
 	public String toCSV() {
 		String result = "";
 		int count = 1;

@@ -5,7 +5,9 @@ import fr.istic.videoGen.MandatoryMedia;
 import fr.istic.videoGen.Media;
 import fr.istic.videoGen.OptionalMedia;
 import fr.istic.videoGen.VideoGeneratorModel;
-
+/**
+ * Class which contains utils functions used by test cases
+ */
 public class UtilsTest {
 	/**
 	 * Give the number of possibilities of playlist in a generatorModel

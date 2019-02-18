@@ -20,7 +20,10 @@ import fr.istic.videoGen.VideoGeneratorModel;
 import model.Possibility;
 import tools.Ffmpeg;
 
-public class PlaylistGen implements VisitorVideoGen{
+/**
+ * Class which are able to generate playlist form a video gen model
+ */
+public class PlaylistGen{
 
 	private Possibility playlist;
 	private VideoGeneratorModel videoGeneratorModel;
@@ -30,13 +33,15 @@ public class PlaylistGen implements VisitorVideoGen{
 		this.videoGeneratorModel = videoGeneratorModel;
 	}
 	
+	/**
+	 * Run the generation of the playlist
+	 */
 	public void process() {
 		playlist = new Possibility();
 		visitVideoGeneratorModel(videoGeneratorModel);		
 	}
 	
-	@Override
-	public void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) {
+	private void visitVideoGeneratorModel(VideoGeneratorModel videoGeneratorModel) {
 		for(Media media : videoGeneratorModel.getMedias()) {
 			if(media instanceof MandatoryMedia) {
 				visitMandatoryMedia((MandatoryMedia) media);
@@ -50,13 +55,11 @@ public class PlaylistGen implements VisitorVideoGen{
 		}
 	}
 
-	@Override
-	public void visitMandatoryMedia(MandatoryMedia mandatoryMedia){
+	private void visitMandatoryMedia(MandatoryMedia mandatoryMedia){
 		playlist.add((mandatoryMedia).getDescription());
 	}
 
-	@Override
-	public void visitOptionalMedia(OptionalMedia optionalMedia) {
+	private void visitOptionalMedia(OptionalMedia optionalMedia) {
 		if(optionalMedia.getDescription() instanceof VideoDescription) {
 			VideoDescription videoDescription = (VideoDescription) optionalMedia.getDescription();
 			if(videoDescription.getProbability() == 0) {
@@ -75,8 +78,7 @@ public class PlaylistGen implements VisitorVideoGen{
 		}
 	}
 
-	@Override
-	public void visitAlternativeMedia(AlternativesMedia alternativesMedia) {
+	private void visitAlternativeMedia(AlternativesMedia alternativesMedia) {
 		List<MediaDescription> mediaDescriptions = new ArrayList<>();
 		
 		for(MediaDescription mediaDescription : alternativesMedia.getMedias()) {
@@ -88,25 +90,27 @@ public class PlaylistGen implements VisitorVideoGen{
 		playlist.add(mediaDescriptions.get(randomIndex));
 	}
 	
-	
+	/**
+	 * @return the last playlist generated
+	 */
 	public Possibility getPlaylist() {
 		return playlist;
 	}
 	/**
-	 * 
-	 * @path
-	 * @param playlistName
-	 * @return the path of the playlist
-	 * @throws FfmpegException
+	 * Generate the last playlist
+	 * @param parentPath where is generated the playlist
+	 * @param playlistName name of the playlist file
+	 * @return the path where the playlist has been generated
+	 * @throws FfmpegException if the generation encountered a problem
 	 */
-	public Optional<String> genPlaylist(String path, String playlistName) throws FfmpegException{
+	public Optional<String> genPlaylist(String parentPath, String playlistName) throws FfmpegException{
 		Possibility parsePossibility = playlist.toPlaylist();
 		Optional<MediaDescription> optional = parsePossibility.get(0);
 		
 		// check if there's a file to concat
 		if(optional.isPresent()) {
-			String inputPath = path;
-			String outputPath = path;
+			String inputPath = parentPath;
+			String outputPath = parentPath;
 			String content = parsePossibility.toFfmpeg("");
 			BufferedWriter writer;
 			inputPath += playlistName + ".txt";

@@ -85,7 +85,7 @@ public class PlaylistService {
 	
 	/**
 	 * Methods called by the JHipster application
-	 * @param fileNeeded the names of the file required in the playlist
+	 * @param fileRequired the names of the file required in the playlist
 	 * @return the output path of the video
 	 */
 	public String process(List<String> fileRequired) {

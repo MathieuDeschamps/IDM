@@ -44,7 +44,7 @@ public class Ffmpeg {
 			process.waitFor();
 			File video = new File(outputPath);
 			if(!video.exists()) {
-				throw new FfmpegException("Impossible to generate the concatenation to " + outputPath);
+				throw new FfmpegException("Impossible to generate the concatenation of the file " + inputPath);
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -96,16 +96,24 @@ public class Ffmpeg {
 		command += inputPath;
 		command += " -acodec libvo_aacenc -vcodec libx264 -s 1920x1080 -r 60 -strict experimental ";
 		command += outputPath;
-		try {
-			Process process = Runtime.getRuntime().exec(command);
-			process.waitFor();
-			File format = new File(outputPath);
-			if(!format.exists()){
-				throw new FfmpegException("Impossible to format the video " + inputPath);
+	
+			//System.out.println("formatVideo: " + command);
+			
+			try {
+				Process process = Runtime.getRuntime().exec(command);
+				process.waitFor();
+				File format = new File(outputPath);
+				if(!format.exists()){
+					throw new FfmpegException("Impossible to format the video " + inputPath);
+				}
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		}catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+			
+		
 	}
 }

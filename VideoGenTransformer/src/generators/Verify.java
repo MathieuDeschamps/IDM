@@ -92,17 +92,19 @@ public class Verify{
 
 	
 	private void verifId(String newId) throws IdAlreadyExists {
-		if(idTable.contains(newId)){
-			throw new IdAlreadyExists("Verif: " + newId);
-		}else {
-			idTable.add(newId);
+		if(newId != null) {
+			if(idTable.contains(newId)){
+				throw new IdAlreadyExists("Verif: id " + newId + "already declared.");
+			}else {
+				idTable.add(newId);
+			}
 		}
 	}
 	
 	private void verifLocation(String location) throws FileNotFoundException {
 		File mediaFile = new File(location);
 		if(!mediaFile.exists()) {
-			throw new FileNotFoundException("Verif: " + location);
+			throw new FileNotFoundException("Verif: file not found " + location + ".");
 		}
 	}
 	
@@ -115,7 +117,7 @@ public class Verify{
 				VideoDescription videoDescription = (VideoDescription) mediaDescription;
 				sumProbability += videoDescription.getProbability();
 				if(sumProbability > 100) {
-					throw new InvalidProbability("Verif:" + videoDescription.getLocation()); 
+					throw new InvalidProbability("Verif: bad probability " + sumProbability + " over 100 for media " + videoDescription.getLocation() + "." ); 
 				}
 			}
 		}
@@ -124,8 +126,9 @@ public class Verify{
 	private void verifProbability(MediaDescription mediaDescription) throws InvalidProbability {
 		if(mediaDescription instanceof VideoDescription){
 			VideoDescription videoDescription = (VideoDescription) mediaDescription;
-			if(videoDescription.getProbability() > 100) {
-				throw new InvalidProbability("Verif:" + videoDescription.getLocation()); 
+			int probability = videoDescription.getProbability();
+			if(probability > 100) {
+				throw new InvalidProbability("Verif: bad probability "+ probability +"over 100 for media " + mediaDescription.getLocation() + "."); 
 			}
 		}
 	}

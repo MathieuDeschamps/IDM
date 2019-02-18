@@ -1,5 +1,7 @@
 package generators;
 
+import java.io.File;
+
 import exceptions.FfmpegException;
 import fr.istic.videoGen.AlternativesMedia;
 import fr.istic.videoGen.MandatoryMedia;
@@ -59,10 +61,13 @@ public class ConverterToMp4{
 	private void visitVideoDescription(VideoDescription mediaDescription) throws FfmpegException {
 		String inputPath = mediaDescription.getLocation();
 		int beginExtension = inputPath.lastIndexOf('.');
-		int beginFile = inputPath.lastIndexOf('/') + 1;
-		String name = inputPath.substring(beginFile, beginExtension);
-		String outputPath = "res/videos/" + name + "_gen.mp4";
-		Ffmpeg.formatVideo(inputPath, outputPath);
+		String inputPathWitoutExtension = inputPath.substring(0, beginExtension);
+		String outputPath = inputPathWitoutExtension + "_conv.mp4";
+		File file = new File(outputPath);
+		System.out.println("-" + file.getName());
+		if(!file.exists()) {
+			Ffmpeg.formatVideo(inputPath, outputPath);
+		}		
 		mediaDescription.setLocation(outputPath);
 	}
 }

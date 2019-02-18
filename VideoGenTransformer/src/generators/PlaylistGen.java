@@ -26,6 +26,7 @@ public class PlaylistGen implements VisitorVideoGen{
 	private VideoGeneratorModel videoGeneratorModel;
 	
 	public PlaylistGen(VideoGeneratorModel videoGeneratorModel) {
+		playlist = new Possibility();
 		this.videoGeneratorModel = videoGeneratorModel;
 	}
 	
@@ -93,19 +94,20 @@ public class PlaylistGen implements VisitorVideoGen{
 	}
 	/**
 	 * 
+	 * @path
 	 * @param playlistName
 	 * @return the path of the playlist
 	 * @throws FfmpegException
 	 */
-	public Optional<String> genPlaylist(String playlistName) throws FfmpegException{
+	public Optional<String> genPlaylist(String path, String playlistName) throws FfmpegException{
 		Possibility parsePossibility = playlist.toPlaylist();
 		Optional<MediaDescription> optional = parsePossibility.get(0);
 		
 		// check if there's a file to concat
 		if(optional.isPresent()) {
-			String inputPath = "res/playlists/";
-			String outputPath = "res/playlists/";
-			String content = parsePossibility.toFfmpeg("../../");
+			String inputPath = path;
+			String outputPath = path;
+			String content = parsePossibility.toFfmpeg("");
 			BufferedWriter writer;
 			inputPath += playlistName + ".txt";
 			outputPath += playlistName + ".mp4";

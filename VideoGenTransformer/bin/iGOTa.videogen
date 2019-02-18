@@ -1,0 +1,35 @@
+VideoGen{
+	mandatory videoseq v1 "res/genGOT/Opening.mp4"
+	mandatory videoseq v2 "res/genGOT/King_s_Landing.mp4"
+	alternatives v3 {
+		videoseq "res/genGOT/Dragonstone.mp4"
+		videoseq "res/genGOT/Harrenhal.mp4"
+		videoseq "res/genGOT/Pyke.mp4"
+		videoseq "res/genGOT/Riverrun.mp4"
+		videoseq "res/genGOT/The_Eyrie.mp4"
+		videoseq "res/genGOT/The_Twins.mp4"
+	}
+	alternatives v4 {
+		videoseq "res/genGOT/Winterfell.mp4" {
+			probability 60
+		}
+		videoseq "res/genGOT/Winterfell_burning.mp4" {
+			probability 40
+		}
+	}
+	mandatory videoseq v5 "res/genGOT/The_Wall.mp4"
+	optional videoseq v6 "res/genGOT/Eastwatch.mp4" {
+		probability 25
+	}
+	alternatives v7 {
+		videoseq "res/genGOT/Braavos.mp4"
+		videoseq "res/genGOT/Dorne.mp4"
+		videoseq "res/genGOT/Meereen.mp4"
+		videoseq "res/genGOT/Moat_Cailin.mp4"
+		videoseq "res/genGOT/Pentos.mp4"
+		videoseq "res/genGOT/Qarth.mp4"
+		videoseq "res/genGOT/Vaes_Dothrak.mp4"
+		videoseq "res/genGOT/Yunkai.mp4"
+	}
+	mandatory videoseq v8 "res/genGOT/Ending.mp4"
+}

@@ -9,13 +9,14 @@ import java.util.Optional;
 
 import org.junit.Test;
 
+import model.ProjectVideoGen;
 import services.PlaylistService;
 
 public class TestPlaylistService {
 	
 	private static final int NB_PLAYLIST_GEN = 10;
 	
-	@Test
+	//@Test
 	public void shouldProcessWithRequiredFile() {
 		PlaylistService service = new PlaylistService("test-files/iGOTa.videogen");
 		List<String> fileRequired = new ArrayList<>();
@@ -28,11 +29,14 @@ public class TestPlaylistService {
 	
 	@Test
 	public void shouldProcessNbTimes() {
-		String path = "";
-		String outputName = "";
-		String specsName = "";
-		PlaylistService service = new PlaylistService(path + outputName + specsName);
-		List<String> outputPaths = service.process(outputName, NB_PLAYLIST_GEN);
+		String path ="/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/spec.videogen";
+		String outputFolderPath = "/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/";
+		String outputName = "LEBLANC_VANSTEEN";
+		String[] outputPaths = new String[0];
+		PlaylistService service = new PlaylistService(outputFolderPath);
+		ProjectVideoGen project = new ProjectVideoGen(outputName, outputFolderPath, path, NB_PLAYLIST_GEN);
+		service.process(project, outputName);
+			outputPaths = project.getPlaylistPaths();
 		File video;
 		for(String outputPath : outputPaths) {
 			video = new File(outputPath);

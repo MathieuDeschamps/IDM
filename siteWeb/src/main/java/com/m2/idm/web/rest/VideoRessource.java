@@ -33,7 +33,7 @@ public class VideoRessource {
 		this.videoService = videoService;
 	}
 	
-	@GetMapping(path="/video",produces="video/mp4")
+	@GetMapping(path="/video/{names}",produces="video/mp4")
 	public ResponseEntity<InputStreamResource> stream(@PathVariable("names") String names) throws FileNotFoundException{
 		
 		String[] tabNames = names.split(",");

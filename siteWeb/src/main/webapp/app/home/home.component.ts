@@ -53,16 +53,16 @@ export class HomeComponent implements OnInit {
     }
 
     generate(){
-        
-        this.src = 'http://localhost:8080/api/video/' + this.value1 +","+this.value2;
+       
+        this.src = 'http://localhost:8081/api/video/' + this.value1 +","+this.value2;
         console.log(this.src);
     }
 
-    check3(event){
-        this.value1 = event.target.id;
+    check1(value: string){
+        this.value1 = value;
     }
 
-    check2(event){
-        this.value2 = event.target.id;
+    check2(value: string){
+        this.value2 = value;
     }
 }

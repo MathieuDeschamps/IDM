@@ -1,0 +1,3 @@
+VideoGen {
+	mandatory videoseq v1 "res/videos/Pexels_Videos_1562544.mp4"
+}

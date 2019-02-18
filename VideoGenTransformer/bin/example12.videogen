@@ -1,7 +1,7 @@
 VideoGen {
-	mandatory image i1 "../../res/images/Pexels_Videos_1562544.mp4"
-	mandatory image i2 "../../res/images/Video_Of_Camels.mp4"
-	mandatory image i3 "../../res/images/Cute_Cat_Falling_Asleep.mp4"
-	mandatory image i4 "../../res/images/Bokeh_Video_Of_Leaves.mp4"
-	mandatory image i5 "../../res/images/Coffee_Machine_Dispensing_Coffee"
+	mandatory image i1 "res/images/Pexels_Videos_1562544.mp4"
+	mandatory image i2 "res/images/Video_Of_Camels.mp4"
+	mandatory image i3 "res/images/Cute_Cat_Falling_Asleep.mp4"
+	mandatory image i4 "res/images/Bokeh_Video_Of_Leaves.mp4"
+	mandatory image i5 "res/images/Coffee_Machine_Dispensing_Coffee"
 }

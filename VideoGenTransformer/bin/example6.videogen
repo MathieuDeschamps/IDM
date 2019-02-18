@@ -1,14 +1,14 @@
 VideoGen {
 	alternatives v1 {
-		videoseq v11 "../../res/videos/A_Wet_Hawk.mp4"
-		videoseq v12 "../../res/videos/Bear_In_A_Forest.mp4"
+		videoseq v11 "res/videos/A_Wet_Hawk.mp4"
+		videoseq v12 "res/videos/Bear_In_A_Forest.mp4"
 	}
 	alternatives v2 {
-		videoseq v21 "../../res/videos/Cute_Cat_Falling_Asleep.mp4"
-		videoseq v22 "../../res/videos/A_Wet_Hawk.mp4"
+		videoseq v21 "res/videos/Cute_Cat_Falling_Asleep.mp4"
+		videoseq v22 "res/videos/A_Wet_Hawk.mp4"
 	}
 	alternatives v3 {
-		videoseq v31 "../../res/videos/Pexels_Videos_1562544.mp4"
-		videoseq v32 "../../res/videos/Pexels_Videos_4335.mp4"
+		videoseq v31 "res/videos/Pexels_Videos_1562544.mp4"
+		videoseq v32 "res/videos/Pexels_Videos_4335.mp4"
 	}
 }

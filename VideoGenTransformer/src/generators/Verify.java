@@ -108,7 +108,7 @@ public class Verify{
 	private void verifId(String newId) throws IdAlreadyExists {
 		if(newId != null) {
 			if(idTable.contains(newId)){
-				throw new IdAlreadyExists("Verif: id " + newId + "already declared.");
+				throw new IdAlreadyExists("Verif: id " + newId + " already declared.");
 			}else {
 				idTable.add(newId);
 			}

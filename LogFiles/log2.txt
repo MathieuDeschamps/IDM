@@ -1,0 +1,122 @@
+KADRI_MERZOUK > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/0_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/1_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/2_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/3_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/4_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/5_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/6_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/7_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/8_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/9_KADRI_MERZOUK.mp4
+
+JAMMAL_MOUTARAJJI > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/JAMMAL_MOUTARAJJI/0_JAMMAL_MOUTARAJJI.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/JAMMAL_MOUTARAJJI/1_JAMMAL_MOUTARAJJI.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/JAMMAL_MOUTARAJJI/2_JAMMAL_MOUTARAJJI.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/JAMMAL_MOUTARAJJI/3_JAMMAL_MOUTARAJJI.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/JAMMAL_MOUTARAJJI/4_JAMMAL_MOUTARAJJI.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/JAMMAL_MOUTARAJJI/5_JAMMAL_MOUTARAJJI.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/JAMMAL_MOUTARAJJI/6_JAMMAL_MOUTARAJJI.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/JAMMAL_MOUTARAJJI/7_JAMMAL_MOUTARAJJI.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/JAMMAL_MOUTARAJJI/8_JAMMAL_MOUTARAJJI.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/JAMMAL_MOUTARAJJI/9_JAMMAL_MOUTARAJJI.mp4
+
+LACHAAL-BOUYAMINE > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/0_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/1_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/2_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/3_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/4_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/5_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/6_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/7_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/8_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/9_LACHAAL-BOUYAMINE.mp4
+
+Bashar NEMEH_Sylvia Hantavoliaina RABE > Located OK| Verified OK| Converted FAIL
+ Errors:
+-Impossible to format the video Videos/optional.mp4
+ Number of playlist generated: 0/10
+
+Donge_Gohier > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Donge_Gohier/0_Donge_Gohier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Donge_Gohier/1_Donge_Gohier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Donge_Gohier/2_Donge_Gohier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Donge_Gohier/3_Donge_Gohier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Donge_Gohier/4_Donge_Gohier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Donge_Gohier/5_Donge_Gohier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Donge_Gohier/6_Donge_Gohier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Donge_Gohier/7_Donge_Gohier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Donge_Gohier/8_Donge_Gohier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Donge_Gohier/9_Donge_Gohier.mp4
+
+DESCHAMPS_Mathieu_&_ESNAULT_Jeremy > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/0_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/1_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/2_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/3_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/4_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/5_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/6_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/7_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/8_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/9_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+
+ANTOINE_LEVAL_ERWAN_IQUEL > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ANTOINE_LEVAL_ERWAN_IQUEL/0_ANTOINE_LEVAL_ERWAN_IQUEL.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ANTOINE_LEVAL_ERWAN_IQUEL/1_ANTOINE_LEVAL_ERWAN_IQUEL.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ANTOINE_LEVAL_ERWAN_IQUEL/2_ANTOINE_LEVAL_ERWAN_IQUEL.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ANTOINE_LEVAL_ERWAN_IQUEL/3_ANTOINE_LEVAL_ERWAN_IQUEL.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ANTOINE_LEVAL_ERWAN_IQUEL/4_ANTOINE_LEVAL_ERWAN_IQUEL.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ANTOINE_LEVAL_ERWAN_IQUEL/5_ANTOINE_LEVAL_ERWAN_IQUEL.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ANTOINE_LEVAL_ERWAN_IQUEL/6_ANTOINE_LEVAL_ERWAN_IQUEL.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ANTOINE_LEVAL_ERWAN_IQUEL/7_ANTOINE_LEVAL_ERWAN_IQUEL.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ANTOINE_LEVAL_ERWAN_IQUEL/8_ANTOINE_LEVAL_ERWAN_IQUEL.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ANTOINE_LEVAL_ERWAN_IQUEL/9_ANTOINE_LEVAL_ERWAN_IQUEL.mp4
+
+ROULEAU-Gautier > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ROULEAU-Gautier/0_ROULEAU-Gautier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ROULEAU-Gautier/1_ROULEAU-Gautier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ROULEAU-Gautier/2_ROULEAU-Gautier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ROULEAU-Gautier/3_ROULEAU-Gautier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ROULEAU-Gautier/4_ROULEAU-Gautier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ROULEAU-Gautier/5_ROULEAU-Gautier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ROULEAU-Gautier/6_ROULEAU-Gautier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ROULEAU-Gautier/7_ROULEAU-Gautier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ROULEAU-Gautier/8_ROULEAU-Gautier.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/ROULEAU-Gautier/9_ROULEAU-Gautier.mp4
+
+Larzillière-Forget > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/0_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/1_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/2_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/3_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/4_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/5_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/6_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/7_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/8_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/9_Larzillière-Forget.mp4
+
+LEBLANC_VANSTEEN > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/0_LEBLANC_VANSTEEN.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/1_LEBLANC_VANSTEEN.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/2_LEBLANC_VANSTEEN.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/3_LEBLANC_VANSTEEN.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/4_LEBLANC_VANSTEEN.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/5_LEBLANC_VANSTEEN.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/6_LEBLANC_VANSTEEN.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/7_LEBLANC_VANSTEEN.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/8_LEBLANC_VANSTEEN.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/9_LEBLANC_VANSTEEN.mp4
+

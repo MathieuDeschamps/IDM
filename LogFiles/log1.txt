@@ -1,0 +1,83 @@
+KADRI_MERZOUK > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/0_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/1_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/2_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/3_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/4_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/5_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/6_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/7_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/8_KADRI_MERZOUK.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/KADRI_MERZOUK/9_KADRI_MERZOUK.mp4
+
+Intermediaire > Located FAIL| Verified FAIL| Converted FAIL
+ Errors:
+-Location Converter: /home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Intermediaire/resources.Orangina not found.
+-Verif: file not found resources.Orangina.
+-Impossible to format the video resources.Orangina
+ Number of playlist generated: 0/10
+
+LACHAAL-BOUYAMINE > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/0_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/1_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/2_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/3_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/4_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/5_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/6_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/7_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/8_LACHAAL-BOUYAMINE.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LACHAAL-BOUYAMINE/9_LACHAAL-BOUYAMINE.mp4
+
+Bashar NEMEH_Sylvia Hantavoliaina RABE > Located OK| Verified OK| Converted FAIL
+ Errors:
+-Impossible to format the video Videos/optional.mp4
+ Number of playlist generated: 0/10
+
+DESCHAMPS_Mathieu_&_ESNAULT_Jeremy > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/0_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/1_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/2_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/3_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/4_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/5_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/6_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/7_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/8_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/DESCHAMPS_Mathieu_&_ESNAULT_Jeremy/9_DESCHAMPS_Mathieu_&_ESNAULT_Jeremy.mp4
+
+ROULEAU-Gautier > Located OK| Verified FAIL| Converted OK
+ Errors:
+-Verif: id v1 already declared.
+ Number of playlist generated: 0/10
+
+Larzillière-Forget > Located OK| Verified OK| Converted OK
+ Number of playlist generated: 10/10
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/0_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/1_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/2_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/3_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/4_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/5_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/6_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/7_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/8_Larzillière-Forget.mp4
+/home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/Larzillière-Forget/9_Larzillière-Forget.mp4
+
+video > Located FAIL| Verified FAIL| Converted FAIL
+ Errors:
+-Location Converter: /home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/video/video/0013_HD_light_540p.mov not found.
+-Verif: file not found video/0013_HD_light_540p.mov.
+-Impossible to format the video video/0013_HD_light_540p.mov
+ Number of playlist generated: 0/10
+
+LEBLANC_VANSTEEN > Located FAIL| Verified FAIL| Converted FAIL
+ Errors:
+-Location Converter: /home/jeremy/Téléchargements/high_scale_tests/IDM_unzip_folder/LEBLANC_VANSTEEN/videos/count.mp4 not found.
+-Verif: file not found videos/count.mp4.
+-Impossible to format the video videos/count.mp4
+ Number of playlist generated: 0/10
+
